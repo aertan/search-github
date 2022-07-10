@@ -7,7 +7,18 @@ import { GithubResponse } from 'src/models/github-response.model';
 
 @Injectable()
 export class RepoService {
+
+    // Dependency injection
     constructor(private readonly http: HttpService) { }
+
+    /**
+     * Gets a list of most popular repositories on GitHub, sorted by number of stars
+     * Could be filtered by language and created date. Also, results could be limited
+     * @param limit {Number}
+     * @param date {String}
+     * @param lang {String}
+     * @returns Promise<Repository[]>
+     */
     async getFilteredRepos(limit: Number, date: String, lang: String): Promise<Repository[]> {
 
         let query = '';
