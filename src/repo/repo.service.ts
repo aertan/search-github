@@ -2,10 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
 
-import { AppConfigService } from 'src/app-config/app-config.service';
+import { AppConfigService } from '../app-config/app-config.service';
 
 import { Repository } from '../models/repository.model';
-import { GithubResponse } from 'src/models/github-response.model';
+import { GithubResponse } from '../models/github-response.model';
 
 @Injectable()
 export class RepoService {

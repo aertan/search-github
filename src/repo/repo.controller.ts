@@ -1,6 +1,6 @@
 import { Controller, Get, Query } from '@nestjs/common';
 
-import { AppConfigService } from 'src/app-config/app-config.service';
+import { AppConfigService } from '../app-config/app-config.service';
 import { RepoService } from './repo.service';
 
 import { InputDto } from '../models/input-dto.model';
